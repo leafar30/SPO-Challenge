@@ -1,0 +1,84 @@
+{
+  "info": {
+    "_postman_id": "bdf3aa94-9754-41dc-be0e-2229a299940a",
+    "name": "SPO challenge",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Success TestCase1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"srCapacity\": \"10\",\n    \"jrCapacity\": \"6\",\n    \"structures\": [\n        35,\n        21,\n        17,\n        28\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/organize/portfolios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "organize",
+            "portfolios"
+          ]
+        },
+        "description": "In: { “rooms”: [35, 21, 17, 28], “senior”: 10, “junior”: 6 }\nOut: [ {senior: 3, junior: 1}, {senior: 1, junior: 2}, {senior: 2, junior: 0}, {senior: 1, junior: 3} ]"
+      },
+      "response": []
+    },
+    {
+      "name": "Success TestCase2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"srCapacity\": \"11\",\n\"jrCapacity\": \"6\",\n\"structures\":[24,28]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/organize/portfolios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "organize",
+            "portfolios"
+          ]
+        },
+        "description": "In: { “rooms”: [24, 28], “senior”: 11, “junior”: 6 }\nOut: [ {senior: 2, junior: 1}, {senior: 2, junior: 1} ]"
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
