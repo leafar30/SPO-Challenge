@@ -2,6 +2,8 @@
 
 SPO Coding Challenge - Rafael Cornelio Bautista, 2019
 
+[Download the build] (https://github.com/leafar30/SPO-Challenge/blob/master/built/SPO-Challenge-1.0.0.jar)
+
 # Purpose
 This project builds to a Java 11 Spring Boot Rest Service, the input from a JSON Body and produces a response. Input represents a list of buildings to clean, and the abilities (how many rooms) of the staff sent to clean it. Output represents the number of staff (senior and junior) to send to each building and the number of Rooms in each building.
 
@@ -20,23 +22,20 @@ The logic calculate the solutions for using more Sr than Jr, and the solution us
 * The service has validations in the RequestBody for: required fields, not empty list, min and max for numeric values
 * The service has logs for errors
 * The service expose REST non-blocking (webflux) endpoints
-* The Service has a class test coverage of 100%
-* The Service has a method test coverage of 94%
-* The Service has a line test coverage of 91%
 
+# Test
+* The project include Integration tests, for the controller (the 2 first test cases are the cases in the challenge description)
+* The project include Unit Test, for the services and Manager
+* The project include a Test for the Actuator status
+* The project include a Test for the Swagger documentation
+* The project has a class test coverage of 100%
+* The project has a method test coverage of 94%
+* The project has a line test coverage of 91%
 
 # 3rd Party Libraries/Code
 * SpringBoot
 * Swagger
 * Testing
-
-
-# Test
-*The project include Integration tests, for the controller; the 2 first cases include the escenarios in the challenge description
-*The project include Unit Test, for the services and Manager
-*The project include a Test for the Actuator status
-*The project include a Test for the Swagger documentation
-
 
 # Build
 * To build the app, first download the project from GitHub.
