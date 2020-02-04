@@ -3,8 +3,8 @@ package com.spo.challenge.service;
 import com.spo.challenge.dto.CleaningOrganizeDto;
 import com.spo.challenge.dto.CleaningOrganizersDto;
 import com.spo.challenge.dto.PortfolioInfoDto;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
@@ -18,8 +18,9 @@ public class PortfolioOrganizerCraft implements PortfolioOrganizer {
         final Integer jrCapacity = portfolioInfoDto.getJrCapacity();
         final Integer srCapacity = portfolioInfoDto.getSrCapacity();
 
-        List<CleaningOrganizeDto> results = new ArrayList<>();
-        structures.forEach(rooms -> results.add(organizeBuilding(jrCapacity, srCapacity, rooms)));
+        final List<CleaningOrganizeDto> results = structures.stream()
+                                                            .map(rooms -> organizeBuilding(jrCapacity, srCapacity, rooms))
+                                                            .collect(Collectors.toList());
 
         return Mono.just(CleaningOrganizersDto.builder().list(results).build());
     }
