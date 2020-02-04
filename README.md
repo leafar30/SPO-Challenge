@@ -2,7 +2,7 @@
 
 SPO Coding Challenge - Rafael Cornelio Bautista, 2019
 
-[Download the build] (https://github.com/leafar30/SPO-Challenge/blob/master/built/SPO-Challenge-1.0.0.jar)
+[Download the build](https://github.com/leafar30/SPO-Challenge/blob/master/built/SPO-Challenge-1.0.0.jar)
 
 # Purpose
 This project builds to a Java 11 Spring Boot Rest Service, the input from a JSON Body and produces a response. Input represents a list of buildings to clean, and the abilities (how many rooms) of the staff sent to clean it. Output represents the number of staff (senior and junior) to send to each building and the number of Rooms in each building.
