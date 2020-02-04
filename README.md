@@ -20,6 +20,9 @@ The logic calculate the solutions for using more Sr than Jr, and the solution us
 * The service has validations in the RequestBody for: required fields, not empty list, min and max for numeric values
 * The service has logs for errors
 * The service expose REST non-blocking (webflux) endpoints
+* The Service has a class test coverage of 100%
+* The Service has a method test coverage of 94%
+* The Service has a line test coverage of 91%
 
 
 # 3rd Party Libraries/Code
